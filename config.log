@@ -1,0 +1,43 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:529: checking for gcc
+configure:642: checking whether the C compiler (gcc  -L/usr/local/opt/llvm@9/lib) works
+configure:658: gcc -o conftest  -I/usr/local/opt/llvm@9/include -L/usr/local/opt/llvm@9/lib conftest.c  1>&5
+configure:655:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(){return(0);}
+^
+1 warning generated.
+configure:684: checking whether the C compiler (gcc  -L/usr/local/opt/llvm@9/lib) is a cross-compiler
+configure:689: checking whether we are using GNU C
+configure:698: gcc -E conftest.c
+configure:717: checking whether gcc accepts -g
+configure:750: checking for main in -lncurses
+configure:765: gcc -o conftest -g -O2 -I/usr/local/opt/llvm@9/include -L/usr/local/opt/llvm@9/lib conftest.c -lncurses   1>&5
+configure:794: checking how to run the C preprocessor
+configure:815: gcc -E -I/usr/local/opt/llvm@9/include conftest.c >/dev/null 2>conftest.out
+configure:874: checking for ANSI C header files
+configure:887: gcc -E -I/usr/local/opt/llvm@9/include conftest.c >/dev/null 2>conftest.out
+configure:954: gcc -o conftest -g -O2 -I/usr/local/opt/llvm@9/include -L/usr/local/opt/llvm@9/lib conftest.c -lncurses  1>&5
+configure:949:67: error: implicitly declaring library function 'exit' with type 'void (int) __attribute__((noreturn))' [-Werror,-Wimplicit-function-declaration]
+if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
+                                                                  ^
+configure:949:67: note: include the header <stdlib.h> or explicitly provide a declaration for 'exit'
+1 error generated.
+configure: failed program was:
+#line 943 "configure"
+#include "confdefs.h"
+#include <ctype.h>
+#define ISLOWER(c) ('a' <= (c) && (c) <= 'z')
+#define TOUPPER(c) (ISLOWER(c) ? 'A' + ((c) - 'a') : (c))
+#define XOR(e, f) (((e) && !(f)) || (!(e) && (f)))
+int main () { int i; for (i = 0; i < 256; i++)
+if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
+exit (0); }
+
+configure:981: checking for sys/time.h
+configure:991: gcc -E -I/usr/local/opt/llvm@9/include conftest.c >/dev/null 2>conftest.out
+configure:981: checking for unistd.h
+configure:991: gcc -E -I/usr/local/opt/llvm@9/include conftest.c >/dev/null 2>conftest.out
+configure:1020: checking return type of signal handlers
+configure:1042: gcc -c -g -O2 -I/usr/local/opt/llvm@9/include conftest.c 1>&5
